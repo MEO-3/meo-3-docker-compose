@@ -1,0 +1,43 @@
+version: '1'
+name: 'meo-3-docker-compose'
+
+services:
+  mosquitto:
+    image: eclipse-mosquitto:latest
+    container_name: mosquitto-mqtt
+    hostname: mosquitto-mqtt
+    volumes:
+      - ./mosquitto-vol:/mosquitto/data
+      - ./mosquitto-vol:/mosquitto/log
+      - type: bind
+        source: ./mosquitto-vol/mosquitto/config/mosquitto.conf
+        target: /mosquitto/config/mosquitto.conf
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    expose:
+      - "1883"
+    networks:
+      - meo-3-net
+
+  node-red:
+    image: nodered/node-red:3.1-debian
+    container_name: node-red
+    volumes:
+      - ./node-red-vol:/node-red/data
+    ports:
+      - "1880:1880"
+    networks:
+      - meo-3-net
+    links:
+      - mosquitto
+    depends_on:
+      - mosquitto
+
+networks:
+  meo-3-net:
+    driver: bridge
+
+volumes:
+  node-red-vol: # Path: node-red-data
+  mosquitto-vol: # Path: mosquitto-data
