@@ -78,5 +78,5 @@ This docker compose setup is still in the early version of MEO 3 project. In thi
 | Tag     | Update log                                                    | Status          |
 |---------|---------------------------------------------------------------|-----------------|
 | v1.0    | Initial version with original Mosquitto and Node-RED images   | Active          |
-| v1.5    | Add custom nodes specify for MEO 3 Project                    | On development  |
+| v1.5    | Add custom nodes specify for MEO 3 Project                    | Active (dev)    |
 | v2.0    | Add Rogo-node to control IR Control Hub (FPT IR Control Hub)  | Planing         |
