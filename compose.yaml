@@ -1,4 +1,4 @@
-version: '1'
+version: '1.0'
 name: 'meo-3-docker-compose'
 
 services:
@@ -21,8 +21,8 @@ services:
       - meo-3-net
 
   node-red:
-    image: nodered/node-red:3.1-debian
-    container_name: node-red
+    image: meo-nodered:1.0
+    container_name: meo-nodered
     volumes:
       - ./node-red-vol:/node-red/data
     ports:
