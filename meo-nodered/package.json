@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "node-red-contrib-meo": "git://github.com/MEO-3/node-red-contrib-meo.git"
+  },
+  "scripts": {
+    "start": "node $NODE_OPTIONS node_modules/node-red/red.js $FLOWS"
+  }
+}
