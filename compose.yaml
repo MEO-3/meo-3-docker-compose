@@ -1,5 +1,5 @@
-version: '1.5'
-name: 'meo-3-docker-compose'
+version: "1"
+name: "meo-3-docker-compose"
 
 services:
   mosquitto:
@@ -20,8 +20,8 @@ services:
     networks:
       - meo-3-net
 
-  node-red:
-    image: meo-nodered:1.0
+  meo-nodered:
+    image: lgthevinh/meo-nodered:latest
     container_name: meo-nodered
     volumes:
       - ./node-red-vol:/node-red/data
