@@ -5,7 +5,7 @@ This is the docker compose setup for MEO 3 project. The compose included Mosquit
 ## Prerequisite
 
 - Docker (recommended Docker Desktop): You can download Docker Desktop from [here](https://www.docker.com/products/docker-desktop)
-- Docker Compose
+- Docker Compose (should be included in Docker Desktop installation)
 
 Check if Docker is installed by running the following command.
 
