@@ -75,8 +75,12 @@ or you can stop/start the services by using Docker Desktop GUI.
 
 This docker compose setup is still in the early version of MEO 3 project. In this version original Mosquitto and Node-RED images are used. The images are not modified to fit the project requirements.
 
-| Tag     | Update log                                                    | Status          |
+| Tag     | Update log (MEO Nodered Image)                                | Status          |
 |---------|---------------------------------------------------------------|-----------------|
-| v1.0    | Initial version with original Mosquitto and Node-RED images   | Active          |
-| v1.5    | Add custom nodes specify for MEO 3 Project                    | Active          |
-| v2.0    | Add Rogo-node to control IR Control Hub (FPT IR Control Hub)  | Planing         |
+| v1.0    | Initial version with original Mosquitto and Node-RED images   | Depricated      |
+| v1.1    | Add custom nodes specify for MEO 3 Project                    | Active          |
+| v2.0    | Add MEO Link IoT to control devices                           | Active          |
+
+In version: v2.0
+- Currently, MEO Link node is added to the Node-RED. However, the node is only supporting turning on/off the devices. The node is not supporting other features such as changing the color of the light bulb or other features.
+- In the future version, the MEO Link node will be updated to support more features.
